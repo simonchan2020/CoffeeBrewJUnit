@@ -1,6 +1,8 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertThat;
 
 public class CafeTest {
 
@@ -31,6 +33,8 @@ public class CafeTest {
         Assert.assertEquals("Wrong coffee type", CoffeeType.Espresso, coffee.getCoffeeType());
         Assert.assertEquals("Wrong amount of milk", NO_MILK, coffee.getMilk());
         Assert.assertEquals("Wrong number of beans", ESPRESSO_BEANS, coffee.getBeans());
+        //another way to validate the property by using HamcCrest
+        assertThat(coffee, hasProperty("beans", equalTo(ESPRESSO_BEANS)));
     }
 
     @Test
@@ -60,6 +64,8 @@ public class CafeTest {
         Assert.assertEquals("Wrong coffee type", CoffeeType.Latte, coffee.getCoffeeType());
         Assert.assertEquals("Wrong amount of milk",LATTE_MILK, coffee.getMilk());
         Assert.assertEquals("Wrong number of beans",LATTE_BEANS, coffee.getBeans());
+        //another way to validate the property by using HamcCrest
+        assertThat(coffee, hasProperty("beans", equalTo(LATTE_BEANS)));
     }
 
     @Test
