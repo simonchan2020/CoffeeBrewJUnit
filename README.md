@@ -2,7 +2,7 @@
 
 # Tools used in this project:
 
-    IntelliJ IEDA, Java, JUnit, Maven framework
+    IntelliJ IDEA, Java, JUnit, Maven framework
 
 # Source Code: src/main/java there are three classes: Coffee, CoffeeType, and Cafe.
 
