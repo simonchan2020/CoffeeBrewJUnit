@@ -2,8 +2,8 @@
  *  Describe the type of coffee that we're going to serve
  */
 public enum CoffeeType {
-    Espresso(7, 0),
-    Latte(8, 225),
+    Espresso(11, 0),
+    Latte(6, 225),
     FilterCoffee(10, 0),
     Cappuccino(8, 100);
 

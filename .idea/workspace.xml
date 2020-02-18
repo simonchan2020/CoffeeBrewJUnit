@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3684875-27c4-4592-8892-05a94e76af8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CoffeeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CoffeeType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CafeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CafeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CafeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CafeTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +43,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
   </component>
-  <component name="RunManager" selected="JUnit.CafeTest.brewingLatteConsumesBeansAndMilk">
+  <component name="RunManager" selected="JUnit.CafeTest">
     <configuration name="CafeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CoffeeBrew" />
       <option name="PACKAGE_NAME" value="" />
@@ -50,31 +57,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CafeTest.brewingEspressoConsumesBeans" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CoffeeBrew" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CafeTest" />
-      <option name="METHOD_NAME" value="brewingEspressoConsumesBeans" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CafeTest.brewingLatteConsumesBeansAndMilk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CoffeeBrew" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CafeTest" />
       <option name="METHOD_NAME" value="brewingLatteConsumesBeansAndMilk" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CafeTest.canBrewEspresso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CoffeeBrew" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CafeTest" />
-      <option name="METHOD_NAME" value="canBrewEspresso" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,13 +77,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CafeTest.mustRestockBeans" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CoffeeBrew" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CafeTest" />
+      <option name="METHOD_NAME" value="mustRestockBeans" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CafeTest.mustRestockMilk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CoffeeBrew" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CafeTest" />
+      <option name="METHOD_NAME" value="mustRestockMilk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CafeTest.brewingLatteConsumesBeansAndMilk" />
         <item itemvalue="JUnit.CafeTest" />
+        <item itemvalue="JUnit.CafeTest.mustRestockBeans" />
+        <item itemvalue="JUnit.CafeTest.mustRestockMilk" />
+        <item itemvalue="JUnit.CafeTest.brewingLatteConsumesBeansAndMilk" />
         <item itemvalue="JUnit.CafeTest.canBrewLatte" />
-        <item itemvalue="JUnit.CafeTest.brewingEspressoConsumesBeans" />
-        <item itemvalue="JUnit.CafeTest.canBrewEspresso" />
       </list>
     </recent_temporary>
   </component>
@@ -118,25 +125,45 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="1036" y="169" key="#com.intellij.ide.util.MemberChooser/0.23.1440.821@0.23.1440.821" timestamp="1582000102190" />
-    <state width="1432" height="219" key="GridCell.Tab.0.bottom" timestamp="1582037316669">
+    <state width="1432" height="219" key="GridCell.Tab.0.bottom" timestamp="1582050094814">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1432" height="219" key="GridCell.Tab.0.bottom/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582050094814" />
     <state width="1432" height="219" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1582036043562" />
-    <state width="1432" height="219" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582037316669" />
-    <state width="1432" height="219" key="GridCell.Tab.0.center" timestamp="1582037316666">
+    <state width="1432" height="219" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582040507218" />
+    <state width="1432" height="219" key="GridCell.Tab.0.center" timestamp="1582050094812">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1432" height="219" key="GridCell.Tab.0.center/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582050094812" />
     <state width="1432" height="219" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1582036043559" />
-    <state width="1432" height="219" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582037316666" />
-    <state width="1432" height="219" key="GridCell.Tab.0.left" timestamp="1582037316663">
+    <state width="1432" height="219" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582040507217" />
+    <state width="1432" height="219" key="GridCell.Tab.0.left" timestamp="1582050094811">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1432" height="219" key="GridCell.Tab.0.left/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582050094811" />
     <state width="1432" height="219" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1582036043559" />
-    <state width="1432" height="219" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582037316663" />
-    <state width="1432" height="219" key="GridCell.Tab.0.right" timestamp="1582037316668">
+    <state width="1432" height="219" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582040507216" />
+    <state width="1432" height="219" key="GridCell.Tab.0.right" timestamp="1582050094813">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1432" height="219" key="GridCell.Tab.0.right/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582050094813" />
     <state width="1432" height="219" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1582036043561" />
-    <state width="1432" height="219" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582037316668" />
+    <state width="1432" height="219" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1582040507217" />
+    <state x="262" y="95" key="Maven.ArtifactSearchDialog" timestamp="1582043788545">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="262" y="95" key="Maven.ArtifactSearchDialog/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582043788545" />
+    <state x="530" y="358" key="ReplaceDuplicatesPrompt" timestamp="1582048230023">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="530" y="358" key="ReplaceDuplicatesPrompt/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582048230023" />
+    <state x="519" y="218" key="chooseDestDirectoryDialog" timestamp="1582044910914">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="519" y="218" key="chooseDestDirectoryDialog/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582044910914" />
+    <state x="650" y="211" width="524" height="484" key="extract.method.dialog" timestamp="1582048219378">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="650" y="211" width="524" height="484" key="extract.method.dialog/-1920.23.1920.1001/0.23.1440.877@0.23.1440.877" timestamp="1582048219378" />
   </component>
 </project>
