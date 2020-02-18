@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class CafeTest {
@@ -9,11 +10,19 @@ public class CafeTest {
     public static final int NO_MILK = 0;
     public static final int NO_BEANS = 0;
 
+    private Cafe cafe;
+
+    @Before
+    public void before(){
+
+        cafe = new Cafe();
+    }
+
     @Test
     public void canBrewEspresso(){
 
         //Given  clause
-        Cafe cafe = cafeWithBeans(ESPRESSO_BEANS);
+        withBeans();
 
         //When clause
         Coffee coffee = cafe.brew(CoffeeType.Espresso);
@@ -28,10 +37,10 @@ public class CafeTest {
     public void brewingEspressoConsumesBeans(){
 
         //Given  clause
-        Cafe cafe = cafeWithBeans(ESPRESSO_BEANS);
+        withBeans();
 
         //When clause
-        Coffee coffee = cafe.brew(CoffeeType.Espresso);
+        cafe.brew(CoffeeType.Espresso);
 
         //Then clause
         Assert.assertEquals(NO_BEANS, cafe.getBeansInStock());
@@ -41,8 +50,8 @@ public class CafeTest {
     public void canBrewLatte(){
 
         //Given  clause
-        Cafe cafe = cafeWithBeans(LATTE_BEANS);
-        cafe.restockMilk(LATTE_MILK);
+        withLatteBeans();
+        cafe.restockMilk(CoffeeType.Latte.getRequiredMilk());
 
         //When clause
         Coffee coffee = cafe.brew(CoffeeType.Latte);
@@ -57,11 +66,11 @@ public class CafeTest {
     public void brewingLatteConsumesBeansAndMilk(){
 
         //Given  clause
-        Cafe cafe = cafeWithBeans(LATTE_BEANS);
+        withLatteBeans();
         cafe.restockMilk(CoffeeType.Latte.getRequiredMilk());
 
         //When clause
-        Coffee coffee = cafe.brew(CoffeeType.Latte);
+        cafe.brew(CoffeeType.Latte);
 
         //Then clause
         Assert.assertEquals(NO_BEANS, cafe.getBeansInStock());
@@ -73,18 +82,15 @@ public class CafeTest {
     public void lattesRequiresMilk(){
 
         //Given  clause
-        Cafe cafe = cafeWithBeans(LATTE_BEANS);
+        withLatteBeans();
 
         //When clause
-        Coffee coffee = cafe.brew(CoffeeType.Latte);
+        cafe.brew(CoffeeType.Latte);
     }
 
     //Then clause
     @Test(expected =  IllegalArgumentException.class)
     public void mustRestockMilk(){
-
-        //Given
-        Cafe cafe = new Cafe();
 
         //When
         cafe.restockMilk(NO_MILK);
@@ -94,13 +100,15 @@ public class CafeTest {
     @Test(expected =  IllegalArgumentException.class)
     public void mustRestockBeans(){
 
-        //Given
-        Cafe cafe = cafeWithBeans(NO_BEANS);
+        //When
+        cafe.restockBeans(NO_BEANS);
     }
 
-    private Cafe cafeWithBeans(int i) {
-        Cafe cafe = new Cafe();
-        cafe.restockBeans(i);
-        return cafe;
+    private void withBeans() {
+        cafe.restockBeans(ESPRESSO_BEANS);
+    }
+
+    private void withLatteBeans(){
+        cafe.restockBeans(LATTE_BEANS);
     }
 }
