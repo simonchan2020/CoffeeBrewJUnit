@@ -9,6 +9,9 @@ public class CafeTest {
     public static final int ESPRESSO_BEANS = CoffeeType.Espresso.getRequiredBeans();
     public static final int LATTE_BEANS = CoffeeType.Latte.getRequiredBeans();
     public static final int LATTE_MILK = CoffeeType.Latte.getRequiredMilk();
+    public static final int CAPPUCCINO_BEANS = CoffeeType.Cappuccino.getRequiredBeans();
+    public static final int CAPPUCCINO_MILK = CoffeeType.Cappuccino.getRequiredMilk();
+    public static final int TEA_MILK = CoffeeType.Tea.getRequiredMilk();
     public static final int NO_MILK = 0;
     public static final int NO_BEANS = 0;
 
@@ -24,7 +27,7 @@ public class CafeTest {
     public void canBrewEspresso(){
 
         //Given  clause
-        withBeans();
+        withEspressoBeans();
 
         //When clause
         Coffee coffee = cafe.brew(CoffeeType.Espresso);
@@ -41,7 +44,7 @@ public class CafeTest {
     public void brewingEspressoConsumesBeans(){
 
         //Given  clause
-        withBeans();
+        withEspressoBeans();
 
         //When clause
         cafe.brew(CoffeeType.Espresso);
@@ -83,6 +86,41 @@ public class CafeTest {
         Assert.assertEquals(NO_MILK, cafe.getMilkInStock());
     }
 
+    @Test
+    public void canBrewCappuccino(){
+
+        //Given  clause
+        withCappuccinoBeans();
+        cafe.restockMilk(CoffeeType.Cappuccino.getRequiredMilk());
+
+        //When clause
+        Coffee coffee = cafe.brew(CoffeeType.Cappuccino);
+
+        //Then clause
+        Assert.assertEquals("Wrong coffee type", CoffeeType.Cappuccino, coffee.getCoffeeType());
+        Assert.assertEquals("Wrong amount of milk", CAPPUCCINO_MILK, coffee.getMilk());
+        Assert.assertEquals("Wrong number of beans", CAPPUCCINO_BEANS, coffee.getBeans());
+        //another way to validate the property by using HamcCrest
+        assertThat(coffee, hasProperty("beans", equalTo(CAPPUCCINO_BEANS)));
+    }
+
+    @Test
+    public void canBrewTea(){
+
+        //Given  clause
+        cafe.restockMilk(CoffeeType.Tea.getRequiredMilk());
+
+        //When clause
+        Coffee coffee = cafe.brew(CoffeeType.Tea);
+
+        //Then clause
+        Assert.assertEquals("Wrong coffee type", CoffeeType.Tea, coffee.getCoffeeType());
+        Assert.assertEquals("Wrong amount of milk", TEA_MILK, coffee.getMilk());
+        Assert.assertEquals("Wrong number of beans", NO_BEANS, coffee.getBeans());
+        //another way to validate the property by using HamcCrest
+        assertThat(coffee, hasProperty("beans", equalTo(NO_BEANS)));
+    }
+
     //Then clause
     @Test(expected = IllegalStateException.class)
     public void lattesRequiresMilk(){
@@ -110,11 +148,15 @@ public class CafeTest {
         cafe.restockBeans(NO_BEANS);
     }
 
-    private void withBeans() {
+    private void withEspressoBeans() {
         cafe.restockBeans(ESPRESSO_BEANS);
     }
 
     private void withLatteBeans(){
         cafe.restockBeans(LATTE_BEANS);
+    }
+
+    private void withCappuccinoBeans(){
+        cafe.restockBeans(CAPPUCCINO_BEANS);
     }
 }

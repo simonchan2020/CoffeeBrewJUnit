@@ -4,8 +4,8 @@
 public enum CoffeeType {
     Espresso(11, 0),
     Latte(6, 225),
-    FilterCoffee(10, 0),
-    Cappuccino(8, 100);
+    Cappuccino(8, 100),
+    Tea(0, 75);
 
     private final int requiredBeans;
     private final int requiredMilk;
