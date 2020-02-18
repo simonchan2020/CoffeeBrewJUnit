@@ -16,7 +16,7 @@ public final class Cafe {
         int requireBeans = coffeeType.getRequiredBeans() * strength;
         int requireMilk = coffeeType.getRequiredMilk() * strength;
         if(requireBeans > beansInStock || requireMilk > milkInStock){
-            throw new IllegalStateException();
+            throw new IllegalStateException("Insufficient beans or milk");
         }
 
         beansInStock -= requireBeans;

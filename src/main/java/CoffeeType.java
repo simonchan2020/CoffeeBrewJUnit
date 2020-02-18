@@ -3,7 +3,7 @@
  */
 public enum CoffeeType {
     Espresso(7, 0),
-    Latte(7, 225),
+    Latte(8, 225),
     FilterCoffee(10, 0),
     Cappuccino(8, 100);
 
